@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="EventWebsite_Style.css">
+
+
+</head>
+
+<body>
+    <!-- Hero Banner with MOC Logo -->
+    <section class="hero_banner">
+        <img src="Images/Logo_dark.png" class="logo-hero-img">
+    </section>
+
+    <!-- About Us -->
+    <section class="about_us">
+        <h1>About Us</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut leo accumsan, lacinia lectus nec,
+            cursus nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis, felis nec
+            ullamcorper luctus, ligula magna condimentum enim, ut euismod augue odio et elit. Nullam a erat
+            augue. Aliquam mattis vitae turpis nec egestas. Maecenas ornare, metus non dignissim tincidunt,
+            nislest ultrices turpis, dapibus volutpat ligula elit id odio. Fusce mauris lectus, tempus eu dapibusnec,mollis sed arcu. Aliquam
+            porta turpis aliquet, vehicula neque at, pellentesque est. Aliquam luctus enimsit amet lacus congue luctus.Mauris pellentesque ut eros et sagittis. Ut sit amet magna
+            orci.Utornare elit lectus, et maximus odio tristique eu. Ut venenatis fringilla scelerisque. Phasellus
+            nisi risus,tincidunt vel tellus eget, blandit tristique lacus. In semper lacus molestie, feugiat arcu vitae,tempus risus.
+        </p>
+
+        <p>
+            Duis gravida rhoncus neque, at lacinia erat gravida varius. Nullam tortor risus, luctus id nunc in,
+            interdum pulvinar metus. Quisque auctor porta mauris volutpat dignissim. Sed lacus orci,ultrices idurna a, fringilla rutrum metus. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit.Suspendissehendrerit ligula libero, ut vestibulum metus suscipit eget. Praesent interdum, lorem tinciduntpellentesque sollicitudin,
+            sem odio tempor mi, a condimentum elit arcu eget dui. Nam blandit interdumenim, vel molestie odio rutrum sit amet. Sed sit amet massa dapibus, feugiattortor et, porttitor dolor.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- Events -->
+    <section class="events">
+
+        <!-- search&city filter -->
+        <div class="row mt-2">
+            <div class="search-box">
+                <select class="form-select" id="filterByCity" onchange="cityFilter()">
+                    <option value="" selected>Select City</option>
+                    <option value="jeddah">Jeddah</option>
+                    <option value="dhahran">Dhahran</option>
+                    <option value="riyadh">Riyadh</option>
+                </select>
+            </div>
+
+
+            <div class="search-box">
+                <input type="text" class="form-control" placeholder="Search Event Name" onkeyup="searchFilter()">
+            </div>
+        </div>
+
+
+
+        <h2>Events</h2>
+        <div class="container-fluid" id="event-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Nav tabs -->
+                    <div class="event-card">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#cultural" aria-controls="cultural" role="tab" data-toggle="tab">Cultural Exhibitions</a></li>
+                            <li role="presentation"><a href="#technology" aria-controls="technology" role="tab" data-toggle="tab">Technology Exhibitions</a></li>
+                            <li role="presentation"><a href="#heritageevents" aria-controls="heritageevents" role="tab" data-toggle="tab">Heritage Events</a></li>
+                            <li role="presentation"><a href="#liveconcerts" aria-controls="liveconcerts" role="tab" data-toggle="tab">Live Concerts</a></li>
+                            <li role="presentation"><a href="#poetryevents" aria-controls="poetryevents" role="tab" data-toggle="tab">Poetry Events</a></li>
+                            <li role="presentation"><a href="#coffeefestival" aria-controls="coffeefestival" role="tab" data-toggle="tab">Coffee Festival</a></li>
+                            <li role="presentation"><a href="#artinstallations" aria-controls="artinstallations" role="tab" data-toggle="tab">Art Installations</a></li>
+                            <li role="presentation"><a href="#culturalkeynotes" aria-controls="culturalkeynotes" role="tab" data-toggle="tab">Cultural Keynotes</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="cultural">
+                                <div class="container-fluid" id="dslrevent">
+                                    <div class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="row">
+                                                    <div class="col jeddah col-md-4">
+                                                        <div class="card d-flex flex-column" data-name="saudi fashion exhibit" id="eventPreview1">
+                                                            <span id="city" class="tag">Jeddah</span>
+
+                                                            <h3>Saudi Fashion Exhibit</h3>
+                                                            <p1>Lorem ipsum dolor</p1><br />
+                                                            <p1>26 Dec - 01 Jan</p1><br />
+                                                            <p2>09:00 am - 11:00 pm</p2>
+
+
+                                                            <div class="card_image">
+
+                                                                <img src="Images/ithra_img.jpg" class="gradiant">
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col dhahran col-md-4">
+                                                        <div class="card d-flex flex-column" data-name="dhahran expo">
+                                                            <span id="city" class="tag">Dhahran</span>
+
+                                                            <h3>Dhahran Expo</h3>
+                                                            <p1>Lorem ipsum dolor</p1><br />
+                                                            <p1>26 Dec - 01 Jan</p1><br />
+                                                            <p2>09:00 am - 11:00 pm</p2>
+
+
+                                                            <div class="card_image">
+
+                                                                <img src="Images/dahranexpo.jpeg" class="gradiant">
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col riyadh col-md-4">
+                                                        <div class="card d-flex flex-column" data-name="noor riyadh exhibit">
+                                                            <span id="city" class="tag">Riyadh</span>
+
+                                                            <h3>Noor Riyadh Exhibit </h3>
+                                                            <p1>Lorem ipsum dolor</p1><br />
+                                                            <p1>26 Dec - 01 Jan</p1><br />
+                                                            <p2>09:00 am - 11:00 pm</p2>
+
+
+                                                            <div class="card_image">
+
+                                                                <img src="Images/noorriyadh2.jpg" class="gradiant">
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="technology">
+                                <div class="container-fluid" id="dslrevent">
+                                    <div class="row">
+                                        <div class="col jeddah col-md-4">
+                                            <div class="card d-flex flex-column" data-name="glow garden">
+                                                <span id="city" class="tag">Jeddah</span>
+
+                                                <h3>Glow Garden</h3>
+                                                <p1>Lorem ipsum dolor</p1><br />
+                                                <p1>26 Dec - 01 Jan</p1><br />
+                                                <p2>09:00 am - 11:00 pm</p2>
+
+
+                                                <div class="card_image">
+
+                                                    <img src="Images/Dubai-Garden-Glow.jpg" class="gradiant">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col riyadh col-md-4">
+                                            <div class="card d-flex flex-column" data-name="poetry exhibit">
+                                                <span id="city" class="tag">Riyadh</span>
+                                                <h3>poetry Exhibit</h3>
+                                                <p1>Lorem ipsum dolor</p1><br />
+                                                <p1>26 Dec - 01 Jan</p1><br />
+                                                <p2>09:00 am - 11:00 pm</p2>
+
+
+                                                <div class="card_image">
+
+                                                    <img src="Images/Riyadh poetry.jpg" class="gradiant">
+
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col jeddah col-md-4">
+                                            <div class="card d-flex flex-column" data-name="biennale exhibit">
+                                                <span id="city" class="tag">Jeddah</span>
+
+                                                <h3>Biennale Exhibit</h3>
+                                                <p1>Lorem ipsum dolor</p1><br />
+                                                <p1>26 Dec - 01 Jan</p1><br />
+                                                <p2>09:00 am - 11:00 pm</p2>
+
+
+                                                <div class="card_image">
+
+                                                    <img src="Images/benal.jpg" class="gradiant">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div role="tabpanel" class="tab-pane" id="heritageevents">
+                                <div class="container-fluid" id="dslrevent">
+                                    <div class="row">
+                                        <div class="col riyadh col-md-4">
+                                            <div class="card d-flex flex-column" data-name="shetana exhibit">
+                                                <span id="city" class="tag">Riyadh</span>
+
+                                                <h3>Shetana Exhibit</h3>
+                                                <p1>Lorem ipsum dolor</p1><br />
+                                                <p1>26 Dec - 01 Jan</p1><br />
+                                                <p2>09:00 am - 11:00 pm</p2>
+
+
+                                                <div class="card_image">
+
+                                                    <img src="Images/Shetana.jpg" class="gradiant">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Previewbackground" class="pop_background">
+                                <div class="pop_content">
+
+                                    <section>
+                                        <h4>Saudi Fashion Exhibit</h4>
+                                        <p3>26 Dec - 01 Jan</p3><br />
+                                        <p4>09:00 am - 11:00 pm</p4><br />
+                                        <span class="categorie">
+                                            Cultural Exhibitions
+                                        </span>
+                                        <span class="sec_line"></span>
+                                    </section>
+
+                                    <section>
+
+                                        <h5>Event Details</h5>
+                                        <p4>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras ut leo accumsan,lacinia lectus nec, cursus nisi.sagittis, felis necullamcorper luctusitae turpis nec egestas.
+                                        </p4>
+
+                                    </section>
+
+                                    <section>
+
+                                        <h5>Images</h5>
+                                        <img src="Images/ithra_img.jpg" class="pop_image">
+                                        <img src="Images/ithraa2.jpg" class="pop_image">
+                                        <img src="Images/Ithraa3.jpg" class="pop_image">
+
+                                    </section>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- display it when no results found-->
+                    <div class="no-result-found" id="unfound">
+                        <img src="Images/notfound.png">
+                        <p>sorry, we could not find what you were looking for.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- preview the pop up function-->
+        <script>
+
+            var epModal = document.getElementById("Previewbackground");
+
+            var epcard = document.getElementById("eventPreview1");
+
+
+            epcard.onclick = function () {
+                epModal.style.display = "block";
+            }
+
+
+            window.onclick = function (event) {
+                if (event.target == epModal) {
+                    epModal.style.display = "none";
+                }
+            }
+
+
+        </script>
+
+
+    </section>
+
+    <!-- city filte function -->
+    <script>
+        var cityFilter = () => {
+            let selectedColor = document.getElementById("filterByCity").value;
+            const input = document.querySelector(".form-select");
+            var notfound = document.getElementById("unfound");
+            let textBox = input.value;
+            const cards = document.getElementsByClassName("col");
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].querySelector(".card");
+                if ((cards[i].classList.contains(selectedColor) || selectedColor == "") && title.innerText.toLowerCase().indexOf(textBox.toLowerCase()) > -1) {
+                    cards[i].classList.remove("d-none");
+                    notfound.style.display = "none";
+                } else {
+                    cards[i].classList.add("d-none");
+                    notfound.style.display = "block";
+                }
+            }
+        }
+    </script>
+
+
+    <!-- search function -->
+    <script>
+        var searchFilter = () => {
+            const input = document.querySelector(".form-control");
+            const cards = document.getElementsByClassName("col");
+            var notfound = document.getElementById("unfound");
+
+            console.log(cards[1])
+            let filter = input.value
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].querySelector(".card");
+                if (title.innerText.toLowerCase().indexOf(filter.toLowerCase()) > -1) {
+                    cards[i].classList.remove("d-none")
+                    notfound.style.display = "none";
+
+                } else {
+                    cards[i].classList.add("d-none")
+                    notfound.style.display = "block";
+
+                }
+
+            }
+        }
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
